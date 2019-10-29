@@ -9,6 +9,10 @@ case $1 in
           echo "New page generated"
           cp Gem* $2/
           ;;
+     build)      
+          jekyll build
+          echo "Page builded"
+          ;;
      *)
           echo "No arguments"
           exit
