@@ -1,15 +1,16 @@
 #!/bin/bash 
-
+echo $1
 case $1 in
-     serve)      
+     serve) 
           jekyll server
           ;;
      new)      
           jekyll new $2
-          cp -r /srv/jekyll/blog_example /srv/jekyll
-          echo 'test'
+          echo "New page generated"
+          cp Gem* $2/
           ;;
      *)
+          echo "No arguments"
           exit
           ;;
 esac
