@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := help
 BUCKET_NAME ?= "demo-blog.zulnowski.com"
 SITE ?= "demo_blog"
-build: ## Build image for development
+build: ## Build image for development, Parameters: site, Usage: make run SITE=blog.example.com
 	docker build -t $(SITE) .
 
 run: ## Run docker with volume mount, Parameters: site, Usage: make run SITE=blog.example.com
